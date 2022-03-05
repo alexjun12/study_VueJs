@@ -21,6 +21,16 @@ const routes = [
     name: 'Contact',
     component: () => import(/* webpackChunkName: "contact", webpackPrefetch:true */ '../views/ContactView.vue')
   },
+  {
+    path: '/basic',
+    name: 'Basic',
+    component: () => import(/* webpackChunkName: "about" */ '../views/BasicView.vue')
+  },
+  {
+    path: '/databinding',
+    name: 'DataBinding',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DataBinding.vue')
+  },
 ]
 
 const router = createRouter({
