@@ -24,12 +24,12 @@ const routes = [
   {
     path: '/basic',
     name: 'Basic',
-    component: () => import(/* webpackChunkName: "about" */ '../views/BasicView.vue')
+    component: () => import(/* webpackChunkName: "basic" */ '../views/BasicView.vue')
   },
   {
     path: '/databinding',
     name: 'DataBinding',
-    component: () => import(/* webpackChunkName: "about" */ '../views/DataBinding.vue')
+    component: () => import(/* webpackChunkName: "databinding" */ '../views/DataBinding.vue')
   },
 ]
 
