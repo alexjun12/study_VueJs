@@ -14,7 +14,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import(/* webpackChunkName: "about", webpackPrefetch:true  */ '../views/AboutView.vue')
   },
   {
     path: '/contact',
@@ -24,12 +24,12 @@ const routes = [
   {
     path: '/basic',
     name: 'Basic',
-    component: () => import(/* webpackChunkName: "basic" */ '../views/BasicView.vue')
+    component: () => import(/* webpackChunkName: "basic", webpackPrefetch:true */ '../views/BasicView.vue')
   },
   {
     path: '/databinding',
     name: 'DataBinding',
-    component: () => import(/* webpackChunkName: "databinding" */ '../views/DataBinding.vue')
+    component: () => import(/* webpackChunkName: "databinding", webpackPrefetch:true */ '../views/DataBinding.vue')
   },
 ]
 
