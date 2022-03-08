@@ -1,7 +1,9 @@
 <template>
 <div>
  <h1>{{temp}}</h1>
- <div>{{temp2}}</div>
+ <form>
+     <input type="text" v-model="temp" />
+ </form>
 </div>
 </template>
 <script>
@@ -11,7 +13,6 @@ export default {
     data() {
         return{
         temp: 'hello',
-        temp2: 'world',
         };
     },
     setup() {},
