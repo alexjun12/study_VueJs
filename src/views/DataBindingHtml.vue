@@ -1,10 +1,6 @@
 <template>
-<div>
- <h1>{{temp}}</h1>
- <form>
-     <input type="text" v-model="temp" />
- </form>
-</div>
+    <div v-html="htmlString">
+    </div>
 </template>
 <script>
 export default {
@@ -12,14 +8,13 @@ export default {
     components: {},
     data() {
         return{
-            temp: 'hello',
+            htmlString: '<p style="color:red;">This is a red string</p>',
         };
     },
     setup() {},
     created() {},
     mounted() {},
     unmounted() {},
-    methods: {
-    }
+    methods: {}
 }
 </script>
