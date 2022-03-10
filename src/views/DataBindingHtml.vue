@@ -1,4 +1,7 @@
 <template>
+<nav>
+    <router-link to="/example">Example</router-link> 
+</nav>
     <div v-html="htmlString">
     </div>
 </template>
