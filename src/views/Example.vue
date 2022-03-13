@@ -2,7 +2,7 @@
     <div>
         <!-- <img v-bind:src="temp" /> -->
         <input type="text" v-model="textValue" />
-        <button type="button" v-bind:disabled="textValue===''" >Click</button>
+        <button type="button" v-bind:disabled="textValue===''" >Click</button> 
     </div>
 </template>
 <script>
@@ -21,5 +21,5 @@ export default {
     unmounted() {},
     methods: {
     }
-}
+} 
 </script>
