@@ -1,27 +1,25 @@
 <template>
     <div>
-        <input type="text" v-model="valueModel "/>
-        <input type="number" v-model.number="valueModel2"/>
-        <textarea v-model="valueModel3"></textarea>
+        <!-- <img v-bind:src="temp" /> -->
+        <input type="text" v-model="textValue" />
+        <button type="button" v-bind:disabled="textValue===''" >Click</button>
     </div>
 </template>
 <script>
 export default {
-    name: 'DataBinding', 
+    name: 'ExampleVue',
     components: {},
     data() {
         return{
-            valueModel: 'South Korea',
-            valueModel2: 12,
-            valueModel3: '안녕',
+        temp : 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Temp_plate_blue.svg/601px-Temp_plate_blue.svg.png',
+        textValue: "",
         };
     },
     setup() {},
     created() {},
-    mounted() {
-        console.log(this.valueModel2);
-    },
+    mounted() {},
     unmounted() {},
-    methods: {}
+    methods: {
+    }
 }
 </script>
