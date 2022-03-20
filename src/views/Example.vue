@@ -1,48 +1,24 @@
 <template>
-    <div>
-        <input type="text" v-model="userInfo.name" />
-        <input type="text" v-model.number="userInfo.age" />
-        <input type="text" v-model="userInfo.job" />
-        <button type="button" @click="saveUserInfo">저장</button>
-    </div>
+    <h1>{{parentMsg}}</h1>
+    <ChildComponents @sendMessage="sendMessage" />
 </template>
 <script>
+import ChildComponents from "./ChildComponents.vue"
 export default {
     name: 'ExampleVue',
-    components: {},
+    components: {ChildComponents},
     data() {
         return{
-        userInfo : {
-            name : '',
-            age: 0,
-            job: '',
-        },
+            parentMsg: "",
         };
-        
     },
     setup() {},
     created() {},
     mounted() {},
     unmounted() {},
     methods: {
-        saveUserInfo(){
-            if(this.userInfo.name === ""){
-                //return alert("이름을 입력하세요!");
-                return this.$swal("이름을 입력하세요!");
-            }
-            if(this.userInfo.age === 0 || this.userInfo.age === ""){
-                return alert("나이를 입력하세요!")
-            }
-            const r = this.saveData(this.userInfo);
-            if(r === "S"){
-                alert("사용자 정보 생성 완료");
-            }
-        },
-        saveData(params) {
-            console.log(params); 
-            const r = "S";
-            return r;
-
+        sendMessage(data){
+            this.parentMsg = data;
         }
     }
 }
