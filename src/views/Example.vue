@@ -1,6 +1,7 @@
 <template>
     <h1>{{parentMsg}}</h1>
-    <ChildComponents @sendMessage="sendMessage" />
+    <button type="button" @click="showData">부모버튼</button>
+    <ChildComponents ref="childComponent" />
 </template>
 <script>
 import ChildComponents from "./ChildComponents.vue"
@@ -12,13 +13,18 @@ export default {
             parentMsg: "",
         };
     },
+    computed: {
+        msg(){
+            return this.$refs.childComponent.msg;
+        }
+    },
     setup() {},
     created() {},
     mounted() {},
     unmounted() {},
     methods: {
-        sendMessage(data){
-            this.parentMsg = data;
+        showData(){
+            alert(this.msg);
         }
     }
 }
