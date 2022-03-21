@@ -72,6 +72,14 @@ const routes = [
         /* webpackChunkName: "mixin", webpackPrefetch:true */ "../views/MixinTest.vue"
       ),
   },
+  {
+    path: "/calculator",
+    name: "Calculator",
+    component: () =>
+      import(
+        /* webpackChunkName: "calculator", webpackPrefetch:true */ "../views/Calculator.vue"
+      ),
+  },
 ];
 
 const router = createRouter({
